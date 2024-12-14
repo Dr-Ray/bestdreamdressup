@@ -1,5 +1,11 @@
 const tops = document.querySelector('#tops');
 const bottoms = document.querySelector('#bottoms');
+const dress = document.querySelector('#dress');
+const footwear = document.querySelector('#footwear');
+const nightWear = document.querySelector('#nightwear');
+const accesories = document.querySelector('#accesories');
+const glasses = document.querySelector('#glasses');
+
 const reset = document.querySelector('#reset');
 
 const canvas = document.querySelector('#canvas');
@@ -21,7 +27,7 @@ window.addEventListener('resize', (e) => {
     }
 });
 
-let dressTop = 0, dressBottom = 0, dressFootwear = 0, nightWear = 0, dressAccesories = 0;
+let dressTop = 0, dressBottom = 0, dressFootwear = 0, dressnightWear = 0, dressAccesories = 0, dressWear=0, dressGlasses=0;
 tops.onclick = () => {
     GameScreen.player.putOnClothes({
         top: Outfits.tops[dressTop]
@@ -44,7 +50,63 @@ bottoms.onclick = () => {
         dressBottom += 1;
     }
 }
+dress.onclick = () => {
+    if (dressWear > Outfits.dresses.length - 1) {
+        dressWear = 0;
+    } 
+
+    GameScreen.player.putOnClothes({
+        dresses: Outfits.dresses[dressWear]
+    });
+
+    dressWear += 1;
+}
+footwear.onclick = () => {
+    GameScreen.player.putOnClothes({
+        footwear: Outfits.footwear[dressFootwear]
+    });
+    if (dressFootwear > Outfits.footwear.length - 2) {
+        dressFootwear = 0;
+    } else {
+        dressFootwear += 1;
+    }
+}
+nightWear.onclick = () => {
+    
+    if (dressnightWear > Outfits.nightwear.length - 1) {
+        dressnightWear = 0;
+    }
+
+    console.log(dressnightWear, Outfits.nightwear[dressnightWear])
+    
+    GameScreen.player.putOnClothes({
+        nightWear: Outfits.nightwear[dressnightWear]
+    });
+
+    dressnightWear += 1;
+}
+accesories.onclick = () => {
+    GameScreen.player.putOnClothes({
+        accesories: Outfits.accesories[dressAccesories]
+    });
+    if (dressAccesories > Outfits.accesories.length - 2) {
+        dressAccesories = 0;
+    } else {
+        dressAccesories += 1;
+    }
+}
+glasses.onclick = () => {
+    GameScreen.player.putOnClothes({
+        glasses: Outfits.glasses[dressGlasses]
+    });
+    if (dressGlasses > Outfits.glasses.length - 2) {
+        dressGlasses = 0;
+    } else {
+        dressGlasses += 1;
+    }
+}
 reset.onclick = () => {
+    dressTop = 0, dressBottom = 0, dressFootwear = 0, dressnightWear = 0, dressAccesories = 0, dressWear=0, dressGlasses=0;
     GameScreen.player.outfit = {
         top: {},
         bottom: {},

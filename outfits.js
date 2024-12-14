@@ -71,19 +71,19 @@ const Outfits = {
             url: "./assets/Shoes.png",
             name: "Shoes_1",
             position: {
-                x: 0, y: 0
+                x: 80, y: 390
             }
         }, {
             url: "./assets/Shoes2.png",
             name: "Shoes_2",
             position: {
-                x: 0, y: 0
+                x: 80, y: 390
             }
         }, {
             url: "./assets/Sneakers.png",
             name: "Sneakers",
             position: {
-                x: 0, y: 0
+                x: 79, y: 390
             }
         },
     ],
@@ -92,7 +92,7 @@ const Outfits = {
             url: "./assets/Coat.png",
             name: "Coat",
             position: {
-                x: 0, y: 0
+                x: 38, y: 65
             }
         },
     ],
@@ -137,7 +137,7 @@ const Outfits = {
             }
         },
         {
-            url: "./assets/Dress1.png",
+            url: "./assets/Dress2.png",
             name: "Dress_2",
             position: {
                 x: 0, y: 0

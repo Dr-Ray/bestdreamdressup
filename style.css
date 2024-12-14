@@ -34,7 +34,23 @@ body {
     gap: .3rem;
 }
 
-@media screen and (max-width:500px) {
+.controls div {
+    background-color: aqua;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    width: 120px;
+    height: 120px;
+}
+
+.controls img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+@media screen and (max-width:600px) {
     .controls {
         width: 200px;
         grid-template-columns: 1fr 1fr;
@@ -51,18 +67,19 @@ body {
     }
 }
 
-.controls div {
-    background-color: aqua;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-    display: block;
-    width: 120px;
-    height: 120px;
-}
+@media screen and (max-width:300px) {
+    .controls {
+        width: 100px;
+        grid-template-columns: 1fr;
+    }
 
-.controls img {
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
+    .controls div {
+        width: 80px;
+        height: 80px;
+    }
+
+    .controls img {
+        width: 50px;
+        height: 50px;
+    }
 }

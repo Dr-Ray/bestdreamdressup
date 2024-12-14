@@ -14,7 +14,6 @@ class CanvasScreen {
     }
 
     drawNewScreen(img) {
-        // this.ctx.clearRect(0, 0, this.width, this.height);
         this.ctx.drawImage(img, 0, 0, this.width, this.height);
     }
 
